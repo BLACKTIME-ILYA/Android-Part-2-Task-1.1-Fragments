@@ -35,13 +35,6 @@ public class BottomFragment extends Fragment implements NumChangeListener{
         return view;
     }
 
-//    void setNums(int num) {
-//        L.d("setNums:" + num);
-//        binary.setText(Integer.toBinaryString(num));
-//        octal.setText(Integer.toOctalString(num));
-//        hexadecimal.setText(Integer.toHexString(num));
-//    }
-
     @Override
     public void numChange(int num) {
         L.d("numChange num = " + num);
