@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,54 +51,36 @@ public class TopFragment extends Fragment {
         num2 = (EditText) view.findViewById(R.id.editTextNum2);
         num3 = (EditText) view.findViewById(R.id.editTextNum3);
 
-        num1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        num1.addTextChangedListener(new MyTextWatcher() {
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void afterTextChanged(Editable s) {
                 try {
                     temp_num = Integer.parseInt(s.toString());
                     changeDelay();
                 } catch (NumberFormatException e) {};
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
             }
         });
 
-        num2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        num2.addTextChangedListener(new MyTextWatcher() {
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void afterTextChanged(Editable s) {
                 try {
                     temp_num = Integer.parseInt(s.toString());
                     changeDelay();
                 } catch (NumberFormatException e) {};
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
             }
         });
 
-        num3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+        num3.addTextChangedListener(new MyTextWatcher() {
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            public void afterTextChanged(Editable s) {
                 try {
                     temp_num = Integer.parseInt(s.toString());
                     changeDelay();
                 } catch (NumberFormatException e) {};
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
             }
         });
 
