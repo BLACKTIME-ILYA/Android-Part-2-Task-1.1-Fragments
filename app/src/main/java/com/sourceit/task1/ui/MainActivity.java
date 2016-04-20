@@ -9,7 +9,7 @@ import com.sourceit.task1.R;
 import com.sourceit.task1.utils.L;
 
 public class MainActivity extends AppCompatActivity {
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
